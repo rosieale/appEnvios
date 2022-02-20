@@ -25,6 +25,7 @@ class ListadoEnvios{
 
         return listado;
     }
+    
     cargarTareasFromArray( datos = [] ) {
         datos.forEach( envio => {
             this._listado[envio.id] = envio;
