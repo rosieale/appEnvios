@@ -1,5 +1,8 @@
+const { v4: uuidv } = require('uuid');
+
 class Envios{
     constructor(codigo,fecha,tracking,origen,destino,emisor,destinatario){
+        this.id = uuidv4()
         this.id=codigo,
         this.codigo=codigo
         this.fecha=fecha
@@ -32,8 +35,15 @@ class ListadoEnvios{
         });
     }
         crearEnvio(datos){
-            const envio= new Tarea(datos);
-            this._listado[envio.id] = envio;
+            const envio= new Envios(
+            datos.codigo,
+            datos.fecha,
+            datos.tracking,
+            datos.origen,
+            datos.destino,
+            datos.emisor,
+            datos.destinatario);
+        this._listado[envio.id] = envio;
         }
     }
 
