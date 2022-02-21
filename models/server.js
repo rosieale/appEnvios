@@ -28,10 +28,3 @@ class Server{
 module.exports = Server
 
 
-        /* .get('/', (req, res){
-            res.send('Hello World')
-        })
-        this.app.listen(process.env.PORT, () =>
-        console.log("El puerto esta corriendo el puerto TCP" + process.env.PORT))
-    }
-}*/
