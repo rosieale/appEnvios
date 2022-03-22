@@ -1,9 +1,10 @@
-const { Router } = require("express");
+const { Router } = require('express')
+const { getEnvios, postEnvios, putEnvios, deleteEnvios } = require('../controllers/envios')
+const router = Router()
 
-//Inicializo la funcion Router
-Router.get('/', getEnvios)
-Router.post('/', postEnvios)
-Router.put('/:id', putEnvios)
-Router.delete('/:id', deleteEnvios)
+router.get('/', getEnvios)
+router.post('/', postEnvios)
+router.put('/:id', putEnvios)
+router.delete('/:id', deleteEnvios)
 
-module.exports = Router
+module.exports = router
