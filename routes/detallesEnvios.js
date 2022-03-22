@@ -6,6 +6,7 @@ const {
     deleteDetallesEnvios
 } = require('../controllers/detallesEnvios');
 //Uso { Router } para destructurar un ob jeto y solo obtener lo que se ocupo de el
+
 const router = Router();
 //Inicializo la funcion Router
 router.get('/', getDetallesEnvios)
