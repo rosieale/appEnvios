@@ -42,3 +42,10 @@ const putEnvios
      guardarDB(data,'envios')
      res.send('Registro Eliminado')
  }
+
+ module.exports = {
+    getEnvios,
+    postEnvios,
+    putEnvios,
+    deleteEnvios
+}
