@@ -11,11 +11,11 @@ const GetPaquetes = (req = request, res = response) =>{
 }
 
 const PostPaquetes = (req = request, res = response) =>{
-    //res.send('POST Endpoint para Seguimientos')
-    let lista = new ListadoSeguimientos()
+    //res.send('POST Endpoint para Paquetes')
+    let lista = new ListadoPaquetes()
     let datosJSON = leerDB('Paquetes');
     lista.cargarTareasFromArray(datosJSON)
-    lista.crearSeguimientos(req.body)
+    lista.crearPaquetes(req.body)
     guardarDB(lista.listadoArr,'Paquetes')
     res.send('Registro Creado')
 }
@@ -35,7 +35,7 @@ const PutPaquetes = (req = request, res = response) =>{
 
 const DeletePaquetes = (req = request, res = response) =>{
     //res.send('DELETE Endpoint para Paquetes')
-    let lista = new ListadoSeguimientos()
+    let lista = new ListadoPaquetes()
     let datosJSON = leerDB('paquetes');
     lista.cargarTareasFromArray(datosJSON)
     let data = lista.listadoArr.filter(item =>  item.id !== req.params.id)

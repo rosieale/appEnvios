@@ -27,8 +27,7 @@ const PutSeguimientos = (req = request, res = response) =>{
     lista.cargarTareasFromArray(datosJSON)
     //funcion para actualizar
     const datos = lista.listadoArr.map(item =>
-          item.id == req.params.id ? {"id":item.id, ...req.body}: item
-        );
+          item.id == req.params.id ? {"id":item.id, ...req.body}: item);
     guardarDB(datos,'Seguimientos')
     res.send('Registro Actualizado')
 }
